@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+  }
+
+  :root {
+    --white: #FFF;
+    --whitesmoke: #F9F9F9;
+    --light-grey: #ECECEC;
+    --grey: #C4C4C4;
+    --medium-grey: #A7A7A7;
+    --deep-grey: #343434;
+    --black: #000000;
+    --blue: #1B77F3;
+    --red: #CF3C3F;
+  }
+
+  .login {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 500px;
+      min-height: 100vh;
+      background-color: #A7A7A7;
+      padding: clamp(35px, 8%, 70px); /* o clamp() serve para darmos um compartamento melhor a medida que a tela aumenta. escolhemos um valor "clamp(min, preferencial, max)" */
+  }
+
+  .login__logo {
+      width: 130px;
+      margin-bottom: 80px;
+  }
+
+  .login__title {
+      color: var(--deep-grey);
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+  }
+
+  /*Login e senha*/
+  .login__label {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .input {
+      width: 100%;
+      background-color: var(--light-grey);
+      border: 2px solid rgba(255, 0, 0, 0); /* Transparente apenas para quando focar ele não ter movimento para por a borda*/
+      border-radius: 5px;
+      outline: none;
+      font-size: 0.9rem;
+      padding: 25px 10px 10px; 
+      font-weight: 600;
+      color: var(--deep-grey);
+  }
+ 
+  .login__label span {
+      position: absolute;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--medium-grey);
+      margin: 20px;
+      cursor: text;
+  }
+
+  /* Quando manter o foco */
+
+  .input:focus {
+      background-color: var(--whitesmoke);
+      border: 2px solid var(--deep-grey);
+  }
+
+  /* Movimento do texto de span para cima */
+
+  .login__label .span-active {
+      font-size: 0.7em;
+      margin: 8px 10px;
+  }
