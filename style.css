@@ -80,6 +80,6 @@
   /* Movimento do texto de span para cima */
 
   .login__label .span-active {
-      font-size: 0.7em;
-      margin: 8px 10px;
+    font-size: 0.7em;
+    margin: 8px 10px;
   }
