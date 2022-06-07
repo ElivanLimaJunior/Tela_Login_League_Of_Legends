@@ -68,6 +68,9 @@
       color: var(--medium-grey);
       margin: 20px;
       cursor: text;
+
+      /* após o Código JavaScript ser usado para adicionar dinamicamente a class .span-active colocamos essa transição para ficar + suave na alteração do elemento na tela*/
+      transition: all 200ms ease; 
   }
 
   /* Quando manter o foco */
