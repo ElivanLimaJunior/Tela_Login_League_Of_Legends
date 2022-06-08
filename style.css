@@ -229,4 +229,9 @@ after = antes */
     background-image: url(imagens/wallpaper.jpg);
     background-size: cover; /*Cobrir todo o espaço disponivel*/
     background-position: center;
+
+    /* No final as divs ficaram brigando por espaço */
+    /* definindo o flex desse filho para 1, essa div irá ocupar 100% apenas do espaço que ela tem disponivel */
+    /* responsividade */
+    flex: 1;
 }
