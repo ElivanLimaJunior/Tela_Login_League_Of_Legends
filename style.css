@@ -80,9 +80,93 @@
       border: 2px solid var(--deep-grey);
   }
 
-  /* Movimento do texto de span para cima */
+  /* Movimento do texto de span para cima (Adicionada a class dinamicamente no javaScript*/
 
   .login__label .span-active {
     font-size: 0.7em;
     margin: 8px 10px;
   }
+
+  /* Estilizandos os icones */
+
+  .login__icons {
+      display: flex;
+      gap: 10px; /*Espaçamento entre os itens*/
+      width: 100%; /*Para a div oculpar 100% da tela*/
+      margin-top: 20px;
+  }
+
+  .login__icons img { /*Diminuindo o tamanho das imagens*/
+      width: 20px;
+  }
+
+  .icons__button {
+      width: 33.33%; /*Para os itens ocuparem o espaço de 33% dos espaços*/
+
+      display: flex; /*posicionando melhor os botões*/
+      align-items: center;
+      justify-content: center;
+
+      height: 35px;
+      border-radius: 5px;
+      cursor: pointer;
+      border: none;
+  }
+
+  /* Acessando os botões */
+  /* Primeiros colocamos a tag mãe deles, e depois acessamos o filho botão. */
+  .login__icons > .icons__button:nth-child(1) { /* Então estamos pegando o primeiro botão que é filho da tag icons */
+    background-color: var(--blue);
+  }
+
+  .login__icons > .icons__button:nth-child(2) {
+      background-color: var(--light-grey);
+  }
+
+  .login__icons > .icons__button:nth-child(3) {
+      background-color: var(--black);
+  }
+
+  /* Botão de mantenhame conectado */
+  .login__label--checkbox {
+      width: 100%;
+      margin: 15px 0 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+  }
+
+/* Estilizando o checkbox */
+/* Para estilizarmos o CheckBox precisamos primeiro tirar todos os efeitos que já vem nele abricado */
+.input--checkbox {
+    appearance: none; /*Com isso resetamos todos os estilos padrão do checkbox*/
+    width: 20px;
+    height: 20px;
+    background-color: var(--light-grey);
+    margin-right: 8px;
+    border-radius: 3px;
+
+    /* após estilizarmos, podemos notar que não irá aparecer o 'v' sinalizando que está marcado. Para isso podemos usar um pseundo elemento*/
+}
+
+/* checked = quando estiver marcado
+after = antes */
+
+/* para marcar */
+.input--checkbox:checked { 
+    background-color: var(--red);
+}
+
+/* estilizando o V dentro da caixa de CheckBox */
+.input--checkbox:checked::after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: 3px solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    margin: 2px 6px;
+
+}
